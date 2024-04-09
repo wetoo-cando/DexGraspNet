@@ -7,8 +7,10 @@ Description: visualize grasp result using plotly.graph_objects
 import os
 import sys
 
-os.chdir(os.path.dirname(os.path.dirname(__file__)))
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)+'/manopth')))
+print(sys.path)
 
 import argparse
 import torch
@@ -99,4 +101,5 @@ if __name__ == '__main__':
         result = f'Index {args.num}  scale {scale}  E_fc {E_fc}  E_dis {E_dis}  E_pen {E_pen}  E_prior {E_prior}  E_spen {E_spen}  E_tpen {E_tpen}'
         fig.add_annotation(text=result, x=0.5, y=0.1, xref='paper', yref='paper')
     fig.update_layout(scene_aspectmode='data')
-    fig.show()
+    # fig.show()
+    fig.write_image("../data/vis_result.png")
