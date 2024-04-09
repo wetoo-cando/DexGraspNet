@@ -91,4 +91,4 @@ if __name__ == '__main__':
         result = f'Index {args.num}  E_fc {E_fc}  E_dis {E_dis}  E_pen {E_pen}'
         fig.add_annotation(text=result, x=0.5, y=0.1, xref='paper', yref='paper')
     fig.update_layout(scene_aspectmode='data')
-    fig.show()
+    fig.write_image("output.png")
