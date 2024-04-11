@@ -1,10 +1,18 @@
 grasp_generation/output.png
 thirdparty/
+data/manifolds/
+data/mujoco_scanned_objects/
+data/normalized_models/
+data/raw_models/
+
 # soft links
 meshdata
 experiments
 graspdata
 dataset
+
+remesh.obj
+run.sh
 
 # Caches
 __pycache__
