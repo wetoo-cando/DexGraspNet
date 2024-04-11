@@ -1,4 +1,6 @@
+grasp_generation/manopth/
 grasp_generation/output.png
+
 thirdparty/
 data/manifolds/
 data/mujoco_scanned_objects/
